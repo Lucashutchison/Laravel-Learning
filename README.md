@@ -1,2 +1,2 @@
 # Laravel-Learning
-Laravel from Scratch
+Working through Laravel from Scratch to build foundational web development skills. 
