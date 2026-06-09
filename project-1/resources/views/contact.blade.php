@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello, Welcome to my site! Feel free to explore </h1>
-
+<h1>Contact Us</h1>
+Lucas hutchison: 
+Lucas.hutchison05@gmail.com
+(406) 451-6362
 <div> 
-    <a href="/about">About Us</a>
-    <a href="/contact">Contact Us</a>
+    <a href="/">Return Home</a>
 </body>
 </html>
