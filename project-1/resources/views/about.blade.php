@@ -1,14 +1,8 @@
-<!doctype html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>About Us:</h1>
+<x-layout>
+    <h1>About Us:</h1> 
+
+     Amuse LLC was founded in 2025 with the goal of bringing excellent food to the Bozeman community. 
 
 <div> 
     <a href="/">Return Home</a>
-</body>
-</html>
+</x-layout>
