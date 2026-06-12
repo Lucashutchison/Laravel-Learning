@@ -18,11 +18,11 @@
         </div>
     </form>
     <div> 
-        @if (count($ideas) > 0)
+        @if ($ideas->count())
         <h2 class="text-2xl font-bold text-white">Saved Ideas</h2>
         <ul> 
             @foreach ($ideas as $idea)
-                <li> {{ $idea }}</li>
+                <li> {{ $idea->description }}</li>
             @endforeach
         </ul>
         @else

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $ideas = session()->get('ideas' , []); 
+   
+   $ideas = \Illuminate\Support\Facades\DB::table('ideas')->get();
+
 
 
     return view('ideas' , [
