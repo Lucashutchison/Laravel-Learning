@@ -20,7 +20,7 @@
     <div> 
         @if ($ideas->count())
         <h2 class="text-2xl font-bold text-white">Saved Ideas</h2>
-        <ul> 
+        <ul class="text-white"> 
             @foreach ($ideas as $idea)
                 <li> {{ $idea->description }}</li>
             @endforeach

@@ -3,16 +3,26 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\idea;
 
-Route::get('/', function () {
+//index page
+Route::get('/ideas', function () {
    
     $ideas = idea::all();
 
 
-    return view('ideas' , [
+    return view('ideas.index' , [
         'ideas' => $ideas,
     ]);
 });
 
+//show page
+Route::get('/ideas/{idea}', function (Idea $idea) {
+
+    return view('ideas.show', [
+        'idea' => $idea,
+    ]);
+});
+
+//create page
 Route::post('/ideas', function () {
     $idea = request('idea');
 
@@ -24,9 +34,18 @@ Route::post('/ideas', function () {
     return redirect('/');
 });
 
-// Temporary route to clear the session data for ideas
+//Edit page 
+Route::get('/ideas/{idea}/edit', function (Idea $idea) {
+
+    return view('ideas.edit', [
+        'idea' => $idea,
+    ]);
+});
+
+
 Route::get('/delete-ideas', function () {
-    session()->forget('ideas');
+
+    idea::truncate();                        //Note: this will delete all records from the ideas table
 
     return redirect('/');
 });
