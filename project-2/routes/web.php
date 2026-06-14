@@ -22,30 +22,40 @@ Route::get('/ideas/{idea}', function (Idea $idea) {
     ]);
 });
 
-//create page
+//store page
 Route::post('/ideas', function () {
-    $idea = request('idea');
+    $idea = request('description');
 
     idea::create([
-        'description' => $idea,
+        'description' => request('description'),
         'state' => 'pending',
     ]);
 
-    return redirect('/');
+    return redirect('/ideas');
 });
 
 //Edit page 
 Route::get('/ideas/{idea}/edit', function (Idea $idea) {
 
-    return view('ideas.edit', [
+    return view('ideas/edit', [
         'idea' => $idea,
     ]);
 });
 
+//Update page
+Route::patch('/ideas/{idea}', function (Idea $idea) {
+    $idea->update([
+        'description' => request('description'),
+        'state' => 'pending',
+    ]);
 
-Route::get('/delete-ideas', function () {
+    return redirect('/ideas/' . $idea->id);
+});
 
-    idea::truncate();                        //Note: this will delete all records from the ideas table
+//destroy 
+Route::delete('/ideas/{idea}', function (Idea $idea) {
 
-    return redirect('/');
+    $idea->delete();
+
+    return redirect('/ideas');
 });
