@@ -14,6 +14,20 @@ Route::get('/ideas', function () {
     ]);
 });
 
+//Create page
+Route::get('/ideas/create', function () {
+    return view('ideas/create');
+});
+
+//Edit page
+Route::get('/ideas/{idea}/edit', function (Idea $idea) {
+
+    return view('ideas/edit', [
+        'idea' => $idea,
+    ]);
+});
+
+
 //show page
 Route::get('/ideas/{idea}', function (Idea $idea) {
 

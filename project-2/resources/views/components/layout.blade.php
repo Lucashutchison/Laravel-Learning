@@ -18,7 +18,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
 <body>
     <nav> 
-    <a href="/">Idea Box</a>
+    <a href="/ideas">All Ideas</a>
     </nav>
 </body>
 
