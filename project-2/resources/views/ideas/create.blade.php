@@ -18,6 +18,13 @@
           <p class="mt-3 text-sm/6 text-white">Have an Idea you'd like to save?</p>
 
         </div>
+
+        <div class="col-span-full text-red-500 italic">
+            @error('description')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+
     </form>
     <div> 
        

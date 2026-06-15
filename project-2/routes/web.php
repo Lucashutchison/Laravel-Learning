@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\idea;
+use App\Http\Controllers\IdeasController;
 
 //index page
 Route::get('/ideas', [IdeasController::class, 'index']);

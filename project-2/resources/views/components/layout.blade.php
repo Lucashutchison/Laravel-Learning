@@ -18,7 +18,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
 <body>
     <nav> 
-    <a href="/ideas">All Ideas</a>
+    <a href="/ideas/create">Create a New Idea?</a>
+
     </nav>
 </body>
 
