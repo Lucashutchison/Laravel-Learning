@@ -29,7 +29,7 @@
     
 </body>
 
-<main class="max-w-5xl mx-auto p-6">
+<main class="max-w-5xl mx-auto p-6 data-theme caramellatte">
 
 {{ $slot }} 
 
