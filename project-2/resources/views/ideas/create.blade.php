@@ -15,13 +15,13 @@
      
         </div>
         
-          <p class="mt-3 text-md/6">Have an Idea you'd like to save?</p>
+                <p class="mt-3 text-md/6">Have an Idea you'd like to save?</p>
+
 
         </div>
 
-        <x-error name="description" />
-
-
+            <x-error name="description" />
+            
     </form>
     <div> 
        

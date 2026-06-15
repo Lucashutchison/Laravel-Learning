@@ -31,7 +31,7 @@ class IdeaRequest extends FormRequest
     {
         return [ 
             'description.required'=>  'Youre no fun, Gimme an Idea!',
-            'description.min'=>  'Cmon, your idea has to be longer than that! Gimme 10 Characters if you want me to save it.',
+            'description.min'=>  'Your idea has to be longer than that! Gimme 10 Characters if you want me to save it.',
         ];
     }
 }

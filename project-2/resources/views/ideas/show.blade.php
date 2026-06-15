@@ -1,20 +1,21 @@
 <x-layout title="Ideas">
     
-    <div class = "text-2xl font-bold text-gray-800"> 
+    <div class = "data-theme caramelatte"> 
     
-    <h2 class="mt-6">Saved Idea</h2>
+    <h2 class="text-4xl font-bold underline mt-6">Saved Idea</h2>
 
-      <p>{{ $idea->description }}</p>
+      <p class="text-xl mt-6">{{ $idea->description }}</p>
        
     </div> 
    
     <div class="mt-3">
+
        <a href="/ideas/{{ $idea->id  }}/edit"  
-            class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            class="btn btn-accent data-theme caramelatte">
        Edit
     </a>
 
-    <a href="/ideas" class="rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 ml-3">
+    <a href="/ideas" class="btn btn-secondary data-theme caramelatte">
         Back to Ideas
     </a>
     </div>
