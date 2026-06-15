@@ -19,11 +19,7 @@
 
         </div>
 
-        <div class="col-span-full text-red-500 italic">
-            @error('description')
-                <p>{{ $message }}</p>
-            @enderror
-        </div>
+        <x-error name="description" />
 
     </form>
     <div> 
