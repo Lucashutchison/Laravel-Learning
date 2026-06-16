@@ -15,8 +15,8 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/ideas">Saved Ideas</a></li>
-      <li><a href="/ideas/create">Create Idea</a></li>
+      <li class="font-bold"><a href="/ideas">Saved Ideas</a></li>
+      <li class="font-bold"><a href="/ideas/create">Create Idea</a></li>
     </ul>
   </div>
   <div class="navbar-end">
