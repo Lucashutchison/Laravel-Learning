@@ -11,7 +11,7 @@
         <li><a>Create Idea</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl">Idea Hub</a>
+    <a href="/"class="btn btn-ghost text-xl">Idea Hub</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
@@ -20,6 +20,6 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Register</a>
+    <a href="/register" class="btn btn-accent">Register</a>
   </div>
 </div>

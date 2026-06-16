@@ -70,8 +70,12 @@ class IdeasController extends Controller
      */
     public function update(IdeaRequest $request, Idea $idea)
     {
-        
+        $idea->update([
+            'description'=> $request->description,
+        ]);
+
     return redirect('/ideas/' . $idea->id);
+
     }
 
     /**

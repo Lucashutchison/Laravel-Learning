@@ -21,17 +21,18 @@
 
         
             
-            <button type="submit" form="delete-idea-form" class="btn btn-danger data-theme caramelatte">
+          <button type="submit" form="delete-idea-form" class="btn btn-danger data-theme caramelatte">
                 Delete
             </button>
-
+            
             </div>
 
-        </form>
+        
 
           <p class="mt-3 text-sm/6 text-white">Update Idea?</p>
 
-        </div>
+    </div>
+
     </form>
 
     <form method="post" action="/ideas/{{ $idea->id }}" id="delete-idea-form">
