@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\idea;
 use App\Http\Controllers\IdeasController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\SessionsController;
 
 //Welcome page 
 Route::get('/', function () {
@@ -34,6 +35,15 @@ Route::patch('/ideas/{idea}', [IdeasController::class, 'update']);
 //destroy 
 Route::delete('/ideas/{idea}', [IdeasController::class, 'destroy']);
 
+
+
 //register 
 Route::get('register', [AuthController::class, 'create']); 
 Route::post('register', [AuthController::class, 'store']); 
+
+//Login 
+Route::get('/login', [SessionsController::class, 'create']);
+Route::post('login', [SessionsController::class, 'store']);
+
+//Logout 
+Route::delete('/logout', [SessionsController::class, 'destroy']);

@@ -19,7 +19,26 @@
       <li class="font-bold"><a href="/ideas/create">Create Idea</a></li>
     </ul>
   </div>
-  <div class="navbar-end">
-    <a href="/register" class="btn btn-accent">Register</a>
+
+
+  <div class="navbar-end space-x-2">
+
+    @guest
+            <a href="/register" class="btn btn-accent">Register</a>
+            <a href="/login" class="btn btn-secondary">Login</a>
+    @endguest
+
+    @auth 
+
+        <form method="POST" action="/logout"> 
+
+        @csrf 
+        @method('DELETE')
+
+            <button class="btn btn-secondary">Sign Out</button> 
+
+        </form>
+    @endauth
+
   </div>
 </div>
