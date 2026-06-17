@@ -11,39 +11,47 @@ Route::get('/', function () {
     return view('ideas/welcome');
 });
 
-//index page
-Route::get('/ideas', [IdeasController::class, 'index']);
-   
-//Create page
-Route::get('/ideas/create', [IdeasController::class, 'create']);
+//Authenticated User
+Route::middleware('auth')->group(function () {
 
-//Edit page
-Route::get('/ideas/{idea}/edit', [IdeasController::class, 'edit']);
+        //index page
+        Route::get('/ideas', [IdeasController::class, 'index']);
 
-//show page
-Route::get('/ideas/{idea}', [IdeasController::class, 'show']);
+        //Create page
+        Route::get('/ideas/create', [IdeasController::class, 'create']);
 
-//store page
-Route::post('/ideas', [IdeasController::class, 'store']);
+        //Edit page
+        Route::get('/ideas/{idea}/edit', [IdeasController::class, 'edit']);
 
-//Edit page 
-Route::get('/ideas/{idea}/edit', [IdeasController::class, 'edit']);
+        //show page
+        Route::get('/ideas/{idea}', [IdeasController::class, 'show']);
 
-//Update page
-Route::patch('/ideas/{idea}', [IdeasController::class, 'update']);
+        //store page
+        Route::post('/ideas', [IdeasController::class, 'store']);
 
-//destroy 
-Route::delete('/ideas/{idea}', [IdeasController::class, 'destroy']);
+        //Edit page 
+        Route::get('/ideas/{idea}/edit', [IdeasController::class, 'edit']);
+
+        //Update page
+        Route::patch('/ideas/{idea}', [IdeasController::class, 'update']);
+
+        //destroy 
+        Route::delete('/ideas/{idea}', [IdeasController::class, 'destroy']);
 
 
+        //Logout 
+        Route::delete('/logout', [SessionsController::class, 'destroy']);
+}); 
 
-//register 
-Route::get('register', [AuthController::class, 'create']); 
-Route::post('register', [AuthController::class, 'store']); 
+//Guest
+Route::middleware('guest')->group(function () {
 
-//Login 
-Route::get('/login', [SessionsController::class, 'create']);
-Route::post('login', [SessionsController::class, 'store']);
+        //register 
+        Route::get('register', [AuthController::class, 'create']);
+        Route::post('register', [AuthController::class, 'store']);
 
-//Logout 
-Route::delete('/logout', [SessionsController::class, 'destroy']);
+        //Login 
+        Route::get('/login', [SessionsController::class, 'create'])->name('login');
+        Route::post('login', [SessionsController::class, 'store']);
+
+});
