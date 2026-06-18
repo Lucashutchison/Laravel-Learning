@@ -24,7 +24,7 @@
     </form>
 
         @if ($errors->any())
-            <div class ="mx-auto" style="color: red;">
+            <div class ="text-align-center" style="color: red;">
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>

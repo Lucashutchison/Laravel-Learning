@@ -20,8 +20,11 @@
 
         </ul>
         @else
-        <p class="data-theme caramelatte">No ideas have been saved yet.<a href="/ideas/create" class="text-indigo-400 ml-2">Create One?</a></p>
+        <p class="data-theme caramelatte">No ideas have been saved yet.</p>
         @endif
+
+
+        <p class ="mt-4"><a href="/ideas/create" class="text-md underline ml-2 mt-5">Create a New One?</a></p>
     </div> 
 
 </x-layout>
