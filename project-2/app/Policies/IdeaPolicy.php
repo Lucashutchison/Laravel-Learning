@@ -9,15 +9,7 @@ use Illuminate\Auth\Access\Response;
 class IdeaPolicy
 {
    
-    /**
-     * Determine whether the user can view the model.
-     */
-    public function view(User $user, Idea $idea)
-    {
-        return $user->id === $idea->user_id ? Response::allow() : Response::denyAsNotFound();
-    }
-
-
+   
     /**
      * Determine whether the user can update the model.
      */

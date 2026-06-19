@@ -8,8 +8,8 @@
 
             <legend class="text-lg fieldset-legend">Register</legend>
 
-            <label class="label" for="name">Name</label>
-            <input class="input" name="name" placeholder="Your Name" required />
+            <label class="label" for="name">First Name</label>
+            <input class="input" name="name" placeholder="Your First Name" required />
 
             <label class="label" for="email">Email</label>
             <input type="email" class="input" name="email" placeholder="Your Email" required />

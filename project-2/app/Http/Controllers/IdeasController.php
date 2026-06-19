@@ -52,7 +52,7 @@ class IdeasController extends Controller
      */
     public function show(Idea $idea)
     {
-     Gate::authorize('view', $idea);   
+        Gate::authorize('update', $idea);
     
     return view('ideas.show', [
         'idea' => $idea,
@@ -78,7 +78,7 @@ class IdeasController extends Controller
     {
 
         Gate::authorize('update', $idea);
-        
+
         $idea->update([
             'description'=> $request->description,
         ]);
