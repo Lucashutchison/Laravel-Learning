@@ -17,7 +17,7 @@
             <label class="label">Password</label>
             <input type="password" class="input" name="password" placeholder="Password" required />
 
-            <button class="font-bold btn btn-secondary mt-4">Register</button>
+            <button class="font-bold btn btn-secondary mt-4" data-test="reg-button">Register</button>
 
         </fieldset>
 
