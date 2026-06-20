@@ -30,6 +30,8 @@
 
     @auth 
 
+    </button>
+
         <form method="POST" action="/logout"> 
 
         @csrf 

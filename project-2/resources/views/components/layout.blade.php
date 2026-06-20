@@ -1,5 +1,5 @@
 @props([
-    'title' => 'Unspecified' 
+    'title' => 'Home' 
 ])
 
 <!doctype html> 
