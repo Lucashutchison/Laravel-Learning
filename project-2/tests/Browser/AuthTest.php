@@ -6,13 +6,16 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 uses(RefreshDatabase::class);
 
 it('registers a new user', function () {
-    $this->post('/register', [
-        'name' => 'John',
-        'email' => 'jd@email.com',
-        'password' => 'password123',
-        'password_confirmation' => 'password123',
-    ])->assertRedirect('/');
+    visit('/register') 
+        ->fill ('name', 'John Doe')
+        ->fill ('email', 'johndoe@email.com') 
+        ->fill ('password', 'password123')
+        ->press('@reg-button')
+        ->assertPathIs('/ideas');
+
+
+    expect(User::where('email', 'johndoe@email.com')->exists())->toBe(true); 
+
 });
 
- expect(User::where('email', 'jd@email.com')->exists())->toBe(true); 
 

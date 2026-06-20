@@ -42,7 +42,7 @@ class IdeasController extends Controller
 
         $idea = Auth::user()->ideas()->create([
         'description' => request('description'),
-        'state' => 'pending',
+        'state' => request('state'),
     ]);
         
         Auth::user()->notify(new IdeaPublished($idea));
@@ -84,6 +84,7 @@ class IdeasController extends Controller
 
         $idea->update([
             'description'=> $request->description,
+            'state' => $request->state,
         ]);
 
     return redirect('/ideas/' . $idea->id);

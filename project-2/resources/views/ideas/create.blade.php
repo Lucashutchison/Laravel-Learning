@@ -11,6 +11,15 @@
                 </textarea>
           </div>
 
+          <label for="state" class="block text-2xl/6 font-medium mt-4">State</label>
+          <div class="mt-4">
+                <select id="state" name="state" class="select select-bordered w-full max-w-xs">
+                    <option value="pending">Pending</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+          </div>
+
           <div class="mt-6 flex items-center gap-x-6">
 
                 <button type="submit" class="btn btn-accent data-theme caramellatte">
@@ -27,7 +36,5 @@
             <x-error name="description" />
 
     </form>
-    <div> 
-       
-    </div> 
+    
 </x-layout>
