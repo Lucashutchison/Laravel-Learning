@@ -18,9 +18,9 @@
 
     @auth 
 
-        <h1 class="text-7xl font-bold text-center mt-50" >Welcome Back {{ auth()->user()->name }}! </h1>
+        <h1 class="text-7xl font-bold text-center mt-50" >Welcome Back  {{ auth()->user()->name }}! </h1>
 
-        <p class="text-2xl italic text-center mt-10">Want to continue organizing your ideas?</p>
+        <p class="text-2xl italic text-center mt-10">Want to Continue Organizing Your ideas?</p>
 
         <div class="flex justify-center mt-5">
 
