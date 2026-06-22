@@ -29,6 +29,12 @@
 
         </div>
 
+        @session('success')
+            <div class="alert alert-success mt-5 px-4 py-3 rounded-lg absolute bottom-4 right-4">
+                {{ session('success') }}
+            </div>
+        @endsession
+
     @endauth
 
 

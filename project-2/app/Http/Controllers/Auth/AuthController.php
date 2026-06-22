@@ -36,6 +36,6 @@ class AuthController extends Controller
             Auth::login($user);
 
         //return to home page
-            return redirect('/ideas');
+            return redirect()->intended('/')->with('success', 'Your account has been created!');
     }
 }

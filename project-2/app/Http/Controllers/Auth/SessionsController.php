@@ -32,7 +32,7 @@ class SessionsController extends Controller
         //Attempt Login
         if (Auth::attempt ($validated)){
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect()->intended('/')->with('success', 'You are logged in!');
         }
 
         return back()->withErrors([
@@ -50,6 +50,6 @@ class SessionsController extends Controller
     {
         Auth::logout();
 
-        return redirect('/');
+        return redirect('/'); 
     }
 }
